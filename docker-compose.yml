@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  postgres:
+    ports:
+      - "1989:5432"
+    image: postgres:9.6.4
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: "trust"
+    networks:
+      - local
+
+networks:
+  local:
